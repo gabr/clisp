@@ -1,0 +1,57 @@
+;;; Load installed quicklisp
+
+;; First instalation is required:
+;;     (load "quicklisp.lisp")
+;; and follow instructions.
+(load "~/quicklisp/setup.lisp")
+
+;;;; SWANK
+;
+;;; swank server setup
+;(defvar *swank-server-address* "127.0.0.1")
+;(defvar *swank-server-port* 4005)
+;(defvar *swank-server-instance-type* nil)
+;(defvar *swank-connection* nil)
+;
+;;; load swank
+;(ql:quickload :swank-client :silent t)
+;; to cleanup after initialization
+;(ql:quickload :exit-hooks :silent t)
+;
+;(defun swank-server-start ()
+;  "Starts swank server on specified *swank-server-port*"
+;  (swank-loader:init)
+;  (swank:create-server :port *swank-server-port* :dont-close t))
+;
+;(defun swank-cleanup()
+;  "Closes swank connection or server"
+;  ;; On quit stop swank server if was created by this instance
+;  ;; or close swan connection if this instance is a client
+;  (case *swank-server-instance-type*
+;    (:server
+;      (progn
+;        (format t "Stopping swank server")
+;        (swank:stop-server *swank-server-port*)))
+;    (:client
+;      (swank-client:slime-close *swank-connection*))))
+;
+;(defun swank-init ()
+;  "Initializes swank connection or server"
+;  ;; Try swank-client and check for server
+;  (setf *swank-connection* (swank-client:slime-connect
+;                             *swank-server-address*
+;                             *swank-server-port*))
+;  ;; If not connected create server, if connected just print info
+;  (if (null *swank-connection*)
+;    (progn
+;      (swank-server-start)
+;      (setf *swank-server-instance-type* :server))
+;    (progn
+;      (format t "Connected to swank ~a~%" *swank-connection*)
+;      (setf *swank-server-instance-type* :client)))
+;  ;; cleanup after swank on exit
+;  (exit-hooks:add-exit-hook #'swank-cleanup))
+;
+;;; do swank stuff on startup
+;(swank-init)
+
