@@ -1,4 +1,10 @@
-; Dokumentacja: http://clhs.lisp.se
+;;; Practical Common Lisp: http://www.gigamonkeys.com/book/
+;;; Dokumentacja: http://clhs.lisp.se
+;;; CookBook: https://lispcookbook.github.io/cl-cookbook/
+;;; Books: https://github.com/clojurians-org/lisp-ebook
+;;; Functional Common Lisp: https://lisp-journey.gitlab.io/blog/functional-programming-in-common-lisp/
+;;;     http://cl21.org/
+
 ; Wypisanie wszystkich pakietów ze wszystkimi zmiennymi i funkcjami:
 (apropos "")
 ; Wypisanie dla konkretnego pakietu:

@@ -1,1 +1,1 @@
-sbcl --noinform --load sum-tree-nodes.lisp --quit
+sbcl --noinform --load longest-palindrome.lisp --quit
