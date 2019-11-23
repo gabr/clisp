@@ -1,0 +1,69 @@
+TODO
+    [ ] Przeniesienie repo na gitlaba.  Obecnie jest na githubie i powoli mi to
+        przeszkadza bo zaczynam tutaj mieszczać awaryjnie różne kpie książek
+        i strony internetowych, a nie jest to coś czym chciałbym się chwalić
+        publicznie.
+
+https://www.youtube.com/watch?v=YwDpjDZOxF0
+    Tutaj na początku są proponowane fajne książki
+
+https://medium.com/@MartinCracauer/static-type-checking-in-the-programmable-programming-language-lisp-79bb79eb068a
+
+Little bits of Lisp https://www.youtube.com/watch?v=A5CnYlG7sc8&list=PL2VAYZE_4wRJi_vgpjsH75kMhN4KsuzR_
+
+Standard: https://webstore.ansi.org/standards/incits/ansiincits2261994r2004
+
+https://jcubic.pl/jakub-jankiewicz/lisp_tutorial.php
+    Wydrukowałem do books/Common Lisp Tutorial.pdf
+
+Practical Common Lisp: http://www.gigamonkeys.com/book/
+Dokumentacja: http://clhs.lisp.se
+CookBook: https://lispcookbook.github.io/cl-cookbook/
+Books: https://github.com/clojurians-org/lisp-ebook
+Functional Common Lisp: https://lisp-journey.gitlab.io/blog/functional-programming-in-common-lisp/
+    http://cl21.org/
+
+https://github.com/atlas-engineer/next
+    Przeglądarka napisana w CL
+
+
+
+Wypisanie wszystkich pakietów ze wszystkimi zmiennymi i funkcjami:
+    (apropos "")
+
+Wypisanie dla konkretnego pakietu:
+    (apropos "" 'packagename)
+
+Wypisanie wszystkich pakietów:
+    (list-all-packages)
+
+Pokazanie z którego pakietu jest dany symbol
+    (symbol-package 'symbol-name)
+
+Wypisanie informacji o funkcji:
+    (describe #'function-name)
+
+Dekompilacja funkcji:
+    (disassemble #'function-name)
+
+Możesz sie poruszać po katalogach i wypisaywać je używając (tylko clisp):
+    (dir)
+    (cd) ; Wypisz aktualną ścieżkę
+    (dir "*.lisp")
+    (cd "directory")
+
+Ładowanie plików będąc w interpreterze
+    (load "file/path.lisp")
+
+Kompilacja pliku i załadowanie skompilowanej wersji
+    (load (compile-file "file/path.lisp"))
+
+Uzyj macroexpand-1 żeby zobaczyć do czego roziwnie się makro.
+Przykład z kodu cd-database.lisp:
+    (macroexpand-1 '(where :title "Give Us a Break" :ripped t))
+
+
+Slime
+    M-x slime   otwiera konsolę
+    C-c C-l     ładuje cały plik do konsoli
+    C-M-x       wykonuje form znajduj±cy się tuż za kursorem
