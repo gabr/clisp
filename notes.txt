@@ -4,6 +4,10 @@ TODO
         i strony internetowych, a nie jest to coś czym chciałbym się chwalić
         publicznie.
 
+    [ ] Lisp Koans
+        https://github.com/google/lisp-koans
+        https://github.com/google/lisp-koans/pull/111
+
 https://www.youtube.com/watch?v=YwDpjDZOxF0
     Tutaj na początku są proponowane fajne książki
 
@@ -26,6 +30,12 @@ Functional Common Lisp: https://lisp-journey.gitlab.io/blog/functional-programmi
 https://github.com/atlas-engineer/next
     Przeglądarka napisana w CL
 
+http://lisp-univ-etc.blogspot.com/
+    Blog z algorytmami w lispie
+
+https://news.ycombinator.com/item?id=22412148
+https://ambrevar.xyz/modern-common-lisp/index.html
+    Modern, functional Common Lisp: Myths and best practices
 
 
 Wypisanie wszystkich pakietów ze wszystkimi zmiennymi i funkcjami:
@@ -63,7 +73,10 @@ Przykład z kodu cd-database.lisp:
     (macroexpand-1 '(where :title "Give Us a Break" :ripped t))
 
 
+
 Slime
     M-x slime   otwiera konsolę
     C-c C-l     ładuje cały plik do konsoli
     C-M-x       wykonuje form znajduj±cy się tuż za kursorem
+
+
